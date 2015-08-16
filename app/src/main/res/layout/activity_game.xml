@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".GameActivity"
+                android:gravity="center"
+                android:background="@drawable/image3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        android:gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restart"
+            android:id="@+id/restart_button"
+            android:textSize="10pt"
+            android:padding="20dp"
+            android:onClick="restartClick"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mines_left_label"
+            android:text="Androids Left:"
+            android:textSize="8pt"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timer_label"
+        android:text="Time  "
+        android:textSize="15pt"
+        android:layout_below="@id/container"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timer_value"
+        android:layout_toRightOf="@id/timer_label"
+        android:layout_alignTop="@id/timer_label"
+        android:text="0:00"
+        android:textSize="15pt"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/best_label"
+        android:text="Best  "
+        android:textSize="15pt"
+        android:layout_below="@id/timer_label"
+        android:layout_alignLeft="@id/timer_label"
+        android:layout_alignStart="@id/timer_label"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/best_value"
+        android:text="0:00"
+        android:textSize="15pt"
+        android:layout_above="@+id/game_frame"
+        android:layout_alignLeft="@+id/timer_value"
+        android:layout_alignStart="@+id/timer_value"
+        android:textColor="#000000"/>
+
+    <AbsoluteLayout
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:id="@+id/game_frame"
+        android:layout_below="@id/best_label"
+        >
+
+    </AbsoluteLayout>
+
+</RelativeLayout>
